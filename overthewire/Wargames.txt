@@ -1,0 +1,52 @@
+bandit1: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+bandit2: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+bandit3: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+bandit4: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+bandit5: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+bandit6: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+bandit7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+bandit8: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit9: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit10: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+bandit11: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+bandit12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Note* All bandit passwords of current level are stored inside etc/bandit_pass
+
+bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Things I learned:
+-------------------------------------------------------------------------------
+ls -al *        	                                                : Lists all files and their sizes in sub directories
+cat			                                                        : Reads out the file data
+find / -size XXc	                                                : Finds files of XX bytes
+2> /dev/null                                                        : Discards all error logs from command into ""/dev/null"
+grep "<text to find here>" filename.txt                             : Finds the line of text wanted inside filename.txt
+sort data.txt| uniq -u                                              : Sorts the data first then finds the unique string(NOTE: uniq does not work on unsorted data)
+ssh bandit.labs.overthewire.org -l <username> -p <port number>      : SSH's into the bandit server with login username -l and portnumber -l
+strings <filename>                                                  : Finds the readable strings inside the file and displays them
+base64 -d <filename>                                                : Decodes the base64 encoded file and prints it out
+cat data.txt | tr '[a-z]' '[n-za-m]'                                : Reads out cat after mapping [a-z] characters into starting from [nopqrstuvwxyzabcdefghijklm] (also called a ROT13 encoding). Replaces letters at each one with another one when met, eg. A -> N, B -> O ect. 
+>                                                                   : Makes a new file placing contents of previous command into the new file. Ex: (xxd -data.txt >data1.txt)
+mv                                                                  : Moves the file to a new filename
+tar                                                                 : will make the file into compressed file
+file                                                                : tells you type of file (eg. compressed)
+gunzip/bunzip2                                                      : unzips the respective .gz or .bz2 files
+vim <filename>                                                      : allows you to edit files inside terminal
+ssh -i sshkey.private bandit14@localhost                            : allows you to ssh with a private key using bandi14 username at localhost(in this case it was already banditlabs)
+nc <host> <port number>                                             : allows you to read/write data accross network connections (eg. a ssh key)
