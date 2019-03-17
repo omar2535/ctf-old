@@ -53,9 +53,18 @@ allows you to ssh with a private key using bandi14 username at localhost(in this
 nc <host> <port number>
 allows you to read/write data accross network connections (eg. a ssh key)
 
+nc -plv 3000
+    listens verbosly to localhost port 3000
+
 openssl s_client -connect localhost:30001
     allows you to connect to  your localhost ip using ssl(since port will be listening for HTTPS)
 
 nmap -p 31000-32000 localhost -sV --version-intensity 1
     scans ports between 31000 and 32000 on localhost with probe intensity of 1.
 
+ssh omar@omar.com cat readme
+    you can cat stuff on a remote server using ssh
+
+stat -c "%a %U:%G %n" /usr/bin/passwd
+    You can change the run id of a file as root or a certain group
+    so that you don't have to give a user rights to a file explicitly
