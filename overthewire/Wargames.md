@@ -68,3 +68,9 @@ ssh omar@omar.com cat readme
 stat -c "%a %U:%G %n" /usr/bin/passwd
     You can change the run id of a file as root or a certain group
     so that you don't have to give a user rights to a file explicitly
+
+/etc/passwd
+    is a text file containing attributes of each user or account on a linux computer.
+
+more
+    is useful for displaying more information about a command in terminal. Will only be called if screen size is too small. Can enter `vi` from more.
