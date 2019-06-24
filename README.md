@@ -1,2 +1,2 @@
-# overthewirectf
-A repo containing my adventures on playing different types of capture the flag games
+# CTF Repo
+A repo containing my writeups and scripts made while playing different capture the flag games. 
